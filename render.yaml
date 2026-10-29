@@ -5,7 +5,7 @@ services:
     rootDir: backend
     plan: free
     region: oregon
-    buildCommand: npm install && npx tsc --version && npm run build:prod
+    buildCommand: npm install --include=dev && npx tsc --version && npm run build:prod
     startCommand: npm run prisma:deploy && npm run start
     healthCheckPath: /api/health
     envVars:
